@@ -1,0 +1,234 @@
+\documentclass[a4paper]{article}
+   % \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{lmodern}
+    \usepackage[hidelinks]{hyperref}
+    \usepackage[margin=1in]{geometry}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+
+% Define the language macros
+%  The macro with ‘#1’ is the one that will be used
+\newcommand\en[1]{}
+\newcommand\fr[1]{#1}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+
+
+%==============================================================================%
+%================================== Profile ===================================%
+%==============================================================================%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Arthur Woimbée}}\\
+        arthur.woimbee@gmail.com $\cdot$
+        \href{https://www.linkedin.com/in/arthur-woimb%C3%A9e/}{linkedin.com/in/arthur-woimbée} $\cdot$
+        +33640605554 $\cdot$
+        \href{https://framagit.org/awoimbee}{framagit.org/awoimbee} \\
+\end{center}
+
+%==============================================================================%
+%================================== Education =================================%
+%==============================================================================%
+\header{
+    \en{Education}
+    \fr{Formation}
+}
+    \textbf{42}
+        \hfill Paris, France\\
+        \en{Computer Science, Graphics and Algorithms courses, average marks of 114\% \hfill November 2018 - 2021\\}
+        \fr{Code, cursus Graphics et Algorithms, moyenne de 114\% \hfill novembre 2018 - 2021\\}
+        \vspace{2mm}
+    \textbf{Udacity}
+        \hfill le Mans, France\\
+        \en{Machine learning and Tensorflow \hfill August - November 2018\\}
+        \fr{Machine learning et Tensorflow \hfill août - novembre 2018\\}
+        \vspace{2mm}
+    \textbf{Lycée Montesquieu}
+        \hfill Le Mans, France\\
+        \en{High School diploma with a focus on biology and computer science \hfill  2018\\}
+        \fr{Bac S, SVT et ISN (programmation informatique) \hfill  2018\\}
+        \vspace{2mm}
+
+%==============================================================================%
+%================================= Experience =================================%
+%==============================================================================%
+\header{
+    \en{Work and volunteering}
+    \fr{Expériences}
+}
+    \vspace{1mm}
+
+    % MANS'ART
+    % \textbf{Mans\textquotesingle{}Art}
+    %     \hfill le Mans, France\\
+    %     \textit{Volunteer}
+    %     \hfill Summer of 2018\\
+    %     \vspace{-1mm}
+    %     \begin{itemize} \itemsep 1pt
+    %         \item Hands on experience setting up the venues and welcoming visitors
+    %     \end{itemize}
+    \textbf{Concept Restauration}
+        \hfill Chambley, France\\
+        \en{ \textit{Service worker} \hfill Summer of 2019\\}
+        \fr{ \textit{Personnel de service} \hfill été 2019\\}
+        \vspace{-1mm}
+        \begin{itemize} \itemsep 1pt
+            \item
+                \en{set up, cooking, inventory management}
+                \fr{Mise en place, cuisine, gestion des stocks}
+            \item
+                \en{Work in difficult situations, stress management}
+                \fr{Travail en situation difficiles, gestion du stress}
+        \end{itemize}
+    \textbf{Freelance}
+        \hfill le Mans, France\\
+        \en{ \textit{Web development}}
+        \fr{ \textit{Développement web}}
+        \hfill 2016 | 2018\\
+        \vspace{-1mm}
+        \begin{itemize} \itemsep 1pt
+            \item
+                \en{Creation of designs in accordance to the will of the clients}
+                \fr{Relations clientèle}
+            \item
+                \en{Deadline estimation, programming and server management}
+                \fr{Estimation de deadlines, programmation et gestion de serveurs}
+        \end{itemize}
+    \textbf{Lycée Monstesquieu}
+        \hfill le Mans, France\\
+        \en{\textit{Volunteer}}
+        \fr{\textit{Bénévol}}
+        \hfill 2015 | 2018\\
+        \vspace{-1mm}
+        \begin{itemize} \itemsep 1pt
+            \item
+                \en{Organization of all of the big events}
+                \fr{Organisation de tous les gros évènements}
+            \item
+                \en{Maintenance: painting and moving equipment}
+                \fr{Participation à l'entretien du lycée: peinture, déménagements, (...)}
+        \end{itemize}
+    \en{\textbf{General Hospital}}
+    \fr{\textbf{Hôpital Général}}
+        \hfill Bar-le-Duc, France\\
+        \en{\textit{IT Assistant Intern} \hfill May of 2015\\}
+        \fr{\textit{Stage Assistant IT} \hfill mai 2015\\}
+        \vspace{-1mm}
+        \begin{itemize} \itemsep 1pt
+            \item
+                \en{Set up and maintenance of the computer hardware}
+                \fr{Mise en place et réparation du matériel informatique}
+            \item
+                \en{Help hospital staff with hardware and software issues}
+                \fr{Assistance à l'utilisation du matériel et des applications}
+        \end{itemize}
+
+%==============================================================================%
+%=================================== Skills ===================================%
+%==============================================================================%
+\header{
+    \en{Skills}
+    \fr{Compétences}
+}
+\begin{tabular}{ l l }
+	Programming languages: & C, C++, Rust, Python, PHP-HTML-CSS-JS-SQL                             \\
+	Frameworks:            & Tensorflow, Vulkan, SDL2, Ncurses                                     \\
+	UNIX:                  & Good knowledge of the *NIX tools and the GNU toolchain                \\
+	Version control:       & Good knowledge of git                                                 \\
+	Languages:             & Native French, proficient in English, Beginner in Spanish and Russian \\
+\end{tabular}
+\vspace{2mm}
+
+%==============================================================================%
+%================================== Projects ==================================%
+%==============================================================================%
+\header{
+    \en{Projects}
+    \fr{Projets}
+    }
+{\textbf{libft}} {\sl C, intel intrisics} \hfill \href{https://framagit.org/awoimbee\_42/libft}{framagit.org/awoimbee\_42/libft} \\
+My own little libC to use at 42\\
+\vspace*{2mm}
+{\textbf{Corewar}} {\sl C, ncurses, C++} \hfill \href{https://framagit.org/awoimbee\_42/corewar}{framagit.org/awoimbee\_42/corewar}\\
+Virtual machine, pseudo asm and compiler\\
+\vspace*{2mm}
+{\textbf{RT-v1}} {\sl C, SDL2, pthread} \hfill \href{https://framagit.org/awoimbee\_42/rt-v1}{framagit.org/awoimbee\_42/rt-v1}\\
+Basic raytracer\\
+\vspace*{2mm}
+{\textbf{fractol}} {\sl C, (mini)libx, pthread} \hfill \href{https://framagit.org/awoimbee\_42/fractol}{framagit.org/awoimbee\_42/fractol}\\
+A multithreaded fractal viewer in C\\
+\vspace*{2mm}
+{\textbf{fractol\_rust}} {\sl Rust, Vulkan} \hfill \href{https://framagit.org/awoimbee/fractol\_rust}{framagit.org/awoimbee/fractol\_rust}\\
+A quick recreation of fractol, in Rust\\
+\vspace*{2mm}
+
+
+
+\
+\vfill
+\begin{flushright}
+    \en{ \href{https://framagit.org/awoimbee/resume}{made with LaTeX}}
+    \fr{ \href{https://framagit.org/awoimbee/resume}{réalisé en LaTeX}}
+\end{flushright}
+\end{document}
