@@ -1,5 +1,4 @@
 \documentclass[a4paper]{article}
-   % \usepackage{fullpage}
     \usepackage{amsmath}
     \usepackage{amssymb}
     \usepackage{textcomp}
@@ -13,15 +12,13 @@
     \raggedright
 
 % Define the language macros
-%  The macro with ‘#1’ is the one that will be used
+%  The macro with ‘#1’ is the one that will be used <- done by Makefile
 \newcommand\en[1]{}
-\newcommand\fr[1]{#1}
+\newcommand\fr[1]{}
 
 \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
 
-% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% STYLE DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\area} [2] {
     \vspace*{-9pt}
     \begin{verse}
@@ -68,16 +65,12 @@
     \textbf{#1} #2 $\bullet$ #3\\
     #4 \\
 }
-% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
 
-    \begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
 \vspace*{-40pt}
 
-
-
-%==============================================================================%
 %================================== Profile ===================================%
-%==============================================================================%
 \vspace*{-10pt}
 \begin{center}
 	{\Huge \scshape {Arthur Woimbée}}\\
@@ -87,9 +80,7 @@
         \href{https://framagit.org/awoimbee}{framagit.org/awoimbee} \\
 \end{center}
 
-%==============================================================================%
 %================================== Education =================================%
-%==============================================================================%
 \header{
     \en{Education}
     \fr{Formation}
@@ -110,24 +101,13 @@
         \fr{Bac S, SVT et ISN (programmation informatique) \hfill  2018\\}
         \vspace{2mm}
 
-%==============================================================================%
 %================================= Experience =================================%
-%==============================================================================%
 \header{
     \en{Work and volunteering}
     \fr{Expériences}
 }
     \vspace{1mm}
 
-    % MANS'ART
-    % \textbf{Mans\textquotesingle{}Art}
-    %     \hfill le Mans, France\\
-    %     \textit{Volunteer}
-    %     \hfill Summer of 2018\\
-    %     \vspace{-1mm}
-    %     \begin{itemize} \itemsep 1pt
-    %         \item Hands on experience setting up the venues and welcoming visitors
-    %     \end{itemize}
     \textbf{Concept Restauration}
         \hfill Chambley, France\\
         \en{ \textit{Service worker} \hfill Summer of 2019\\}
@@ -222,7 +202,6 @@ A multithreaded fractal viewer in C\\
 {\textbf{fractol\_rust}} {\sl Rust, Vulkan} \hfill \href{https://framagit.org/awoimbee/fractol\_rust}{framagit.org/awoimbee/fractol\_rust}\\
 A quick recreation of fractol, in Rust\\
 \vspace*{2mm}
-
 
 
 \
