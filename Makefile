@@ -3,14 +3,16 @@
 
 TMP_DIR:=tmp
 
+define gen_lang_pdf
+	cp resume.tex $(TMP_DIR)/resume_$(1).tex
+	sed 's|\\newcommand\\$(1)\[1\]{}|\\newcommand\\$(1)[1]{#1}|g' $(TMP_DIR)/resume_$(1).tex > $(TMP_DIR)/tmp && mv $(TMP_DIR)/tmp $(TMP_DIR)/resume_$(1).tex
+	cd $(TMP_DIR); pdflatex resume_$(1).tex
+endef
+
 all:
 	mkdir -p $(OUT_DIR) $(TMP_DIR) | true
-	cp resume.tex $(TMP_DIR)/resume_en.tex
-	cp resume.tex $(TMP_DIR)/resume_fr.tex
-	sed -i 's|\\newcommand\\en\[1\]{}|\\newcommand\\en[1]{#1}|g' $(TMP_DIR)/resume_en.tex
-	sed -i 's|\\newcommand\\fr\[1\]{}|\\newcommand\\fr[1]{#1}|g' $(TMP_DIR)/resume_fr.tex
-	cd $(TMP_DIR); pdflatex resume_fr.tex
-	cd $(TMP_DIR); pdflatex resume_en.tex
+	$(call gen_lang_pdf,en)
+	$(call gen_lang_pdf,fr)
 	mv $(TMP_DIR)/*.pdf .
 
 clean:
