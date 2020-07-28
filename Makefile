@@ -30,3 +30,11 @@ clean:
 
 fclean: clean
 	rm -f cv_en.pdf cv_fr.pdf resume_fr.pdf
+
+clean-git-history: # remove pdf files from the git history
+	git filter-branch --tag-name-filter 'cat' -f --tree-filter '	\
+		find . -type f -name "*.pdf" | while read file;	\
+			do	\
+				git rm -r -f --ignore-unmatch $$file; \
+			done; \
+	' -- --all
