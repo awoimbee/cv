@@ -1,15 +1,17 @@
 \documentclass[a4paper]{article}
-    \usepackage{amsmath}
-    \usepackage{amssymb}
-    \usepackage{textcomp}
-    \usepackage[utf8]{inputenc}
-    \usepackage[T1]{fontenc}
-    \usepackage{lmodern}
-    \usepackage[hidelinks]{hyperref}
-    \usepackage[margin=1in]{geometry}
-    \textheight=10in
-    \pagestyle{empty}
-    \raggedright
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin=1in]{geometry}
+
+\textheight=10in
+\pagestyle{empty}
+\raggedright
 
 % Define the language macros
 %  The macro with ‘#1’ is the one that will be used <- done by Makefile
@@ -36,10 +38,6 @@
     \vspace*{-6pt} \lineunder
 }
 
-\newcommand{\employer} [3] {
-    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
-}
-
 \newcommand{\contact} [3] {
     \vspace*{-10pt}
     \begin{center}
@@ -53,17 +51,6 @@
     \begin{list}
         {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
     \end{list}
-}
-
-\newcommand{\schoolwithcourses} [4] {
-    \textbf{#1} #2 $\bullet$ #3\\
-    #4 \\
-    \vspace*{5pt}
-}
-
-\newcommand{\school} [4] {
-    \textbf{#1} #2 $\bullet$ #3\\
-    #4 \\
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -114,17 +101,21 @@
         \vspace{-1mm}
         \begin{itemize} \itemsep 1pt
             \item
-                \en{reation of unit \& functional tests for the Meero platform}
+                \en{Creation of unit \& functional tests for the Meero platform}
                 \fr{Écriture de tests unitaires \& fonctionnels pour la plateform Meero}
                 {\sl (PHP, Symfony)}
             \item
-                \en{Optimization \& integration of the algorithms written by the R\&D team into a micro-services environment}
-                \fr{Optimisation et intégration d’algorithmes écrits par la R\&D dans un système de micro-services}
+                \en{Optimization of image enhancement algorithms written by the R\&D team}
+                \fr{Optimisation d’algorithmes d'améliaration d'image écrits par la R\&D}
                 {\sl (Tensorflow, Pytorch, TensorRT, numba, Rust, ...)}
             \item
-                \en{Work on a custom step machine to orchestrate our micro-services}
-                \fr{Travail sur une step-machine pour gérer les micro-services}
-                {\sl (Python, FastAPI)}
+                \en{Integration of algorithms into a micro-services environment}
+                \fr{Intégration d’algorithmes dans un système de micro-services}
+                {\sl (Python, FastAPI, Docker, AWS, ...)}
+            \item
+                \en{Work on a custom orchestrator for micro-services}
+                \fr{Travail sur un orchestrateur pour gérer les micro-services}
+                {\sl (Python, FastAPI, AWS)}
             \item
                 \en{Creation of an intuitive and efficient workflow for the R\&D team}
                 \fr{Création et mise en place d’un workflow intuitif et efficace pour la R\&D}
@@ -139,20 +130,25 @@
         \vspace{-1mm}
         \begin{itemize} \itemsep 1pt
             \item
-                \en{Symfony 3 to 4 migration on a project in consant evolution}
-                \fr{Migration Symfony 3 à 4 sur un projet en rapide évolution}
+                \en{Implementation of new features for the Meero platform}
+                \fr{Implémentation de nouvelles features sur la plateforme Meero}
+                {\sl (PHP, Symfony)}
+            \item
+                \en{Refactor and massive code deletion on the Meero platform}
+                \fr{Refacto et massive suppression de code sur la plateforme Meero}
+                {\sl (PHP, Symfony)}
+            \item
+                \en{Symfony 3 to 4 migration on the monolith that was the entire Meero ecosystem}
+                \fr{Migration Symfony 3 à 4 sur le monolithe qu'étais l'écosystème Meero entier}
                 {\sl (Rust, Bash, PHP, Symfony)}
             \item
-                \en{Finalization of the matching algo between photographers \& shoots}
-                \fr{Finalisation de l'algo de matching entre photographes \& shoots}
+                \en{Debugging, finalization \& maintenance of the matching algo between photographers \& shoots}
+                \fr{Debugging, finalisation et maintenace de l'algo de matching entre photographes \& shoots}
                 {\sl (ElasticSearch, PHP)}
             \item
                 \en{Scripts to aid maintenance on the big PHP monolith}
                 \fr{Création de scripts aidants à maintenir le gors monolithe PHP}
                 {\sl (Rust, Bash, Makefile)}
-            % \item
-            %     \en{ TODO }
-            %     \fr{Reprise d'un SaaS lourd en calculs hosté sur AWS}
         \end{itemize}
 
     \textbf{Concept Restauration}
@@ -223,35 +219,35 @@
 %==============================================================================%
 %================================== Projects ==================================%
 %==============================================================================%
-\header{
-    \en{Projects}
-    \fr{Projets}
-}
-\textbf{libft}
-    {\sl C, intel intrisics} \hfill \href{https://github.com/awoimbee-42/libft}{github.com/awoimbee-42/libft} \\
-    \en{My own little libC to use at 42}
-    \fr{Ma propre libC pour utilisation à 42} \\
-\vspace*{2mm}
-\textbf{Corewar}
-    {\sl C, ncurses, C++} \hfill \href{hhttps://github.com/awoimbee-42/corewar}{github.com/awoimbee-42/corewar}\\
-    \en{Virtual machine, pseudo asm and compiler}
-    \fr{Machine virtuelle, pseudo assembleur \& compilateur} \\
-\vspace*{2mm}
-\textbf{RT-v1}
-    {\sl C, SDL2, pthread} \hfill \href{https://github.com/awoimbee-42/RT-v1}{github.com/awoimbee-42/RT-v1}\\
-    \en{Basic raytracer}
-    \fr{Raytracer basique} \\
-\vspace*{2mm}
-\textbf{fractol}
-    {\sl C, (mini)libx, pthread} \hfill \href{https://framagit.org/awoimbee\_42/fractol}{framagit.org/awoimbee\_42/fractol}\\
-    \en{A multithreaded fractal viewer in C}
-    \fr{Un visualiseur de fractales optimisé en C}\\
-\vspace*{2mm}
-\textbf{fractol\_rust}
-    {\sl Rust, Vulkan} \hfill \href{https://framagit.org/awoimbee/fractol\_rust}{framagit.org/awoimbee/fractol\_rust}\\
-    \en{A quick recreation of fractol, in Rust}
-    \fr{Une réécriture rapide de fractol, en Rust}\\
-\vspace*{2mm}
+% \header{
+%     \en{Projects}
+%     \fr{Projets}
+% }
+% \textbf{libft}
+%     {\sl C, intel intrisics} \hfill \href{https://github.com/awoimbee-42/libft}{github.com/awoimbee-42/libft} \\
+%     \en{My own little libC to use at 42}
+%     \fr{Ma propre libC pour utilisation à 42} \\
+% \vspace*{2mm}
+% \textbf{Corewar}
+%     {\sl C, ncurses, C++} \hfill \href{hhttps://github.com/awoimbee-42/corewar}{github.com/awoimbee-42/corewar}\\
+%     \en{Virtual machine, pseudo asm and compiler}
+%     \fr{Machine virtuelle, pseudo assembleur \& compilateur} \\
+% \vspace*{2mm}
+% \textbf{RT-v1}
+%     {\sl C, SDL2, pthread} \hfill \href{https://github.com/awoimbee-42/RT-v1}{github.com/awoimbee-42/RT-v1}\\
+%     \en{Basic raytracer}
+%     \fr{Raytracer basique} \\
+% \vspace*{2mm}
+% \textbf{fractol}
+%     {\sl C, (mini)libx, pthread} \hfill \href{https://framagit.org/awoimbee\_42/fractol}{framagit.org/awoimbee\_42/fractol}\\
+%     \en{A multithreaded fractal viewer in C}
+%     \fr{Un visualiseur de fractales optimisé en C}\\
+% \vspace*{2mm}
+% \textbf{fractol\_rust}
+%     {\sl Rust, Vulkan} \hfill \href{https://framagit.org/awoimbee/fractol\_rust}{framagit.org/awoimbee/fractol\_rust}\\
+%     \en{A quick recreation of fractol, in Rust}
+%     \fr{Une réécriture rapide de fractol, en Rust}\\
+% \vspace*{2mm}
 
 
 \
